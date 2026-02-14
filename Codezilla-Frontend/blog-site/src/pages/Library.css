@@ -1,0 +1,104 @@
+
+
+.library-container {
+
+  margin-top: 70px;
+  min-height: 100vh;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+
+
+
+.header-section {
+  position: relative;
+  margin: auto;
+  height: 140px;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 20px;
+
+  background: url("https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200")
+    center / cover no-repeat;
+}
+
+.header-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(2,6,23,.92), rgba(30,41,59,.7));
+}
+
+.header-section h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #f8fafc;
+  text-shadow: 0 0 10px rgba(99,102,241,.6);
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 14px 16px 50px;
+}
+
+.card-container p {
+  text-align: center;
+  color: #94a3b8;
+}
+
+
+.spin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: 640px) {
+  .header-section {
+    height: 140px;
+    padding: 32px;
+  }
+
+  .header-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 30px 60px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .library-container {
+    padding: 0 40px;
+  }
+
+  .header-section {
+    height: 140px;
+    margin: 30px auto 50px;
+    max-width: 1200px;
+    border-radius: 24px;
+  }
+
+  .header-section h1 {
+    font-size: 3rem;
+    max-width: 70%;
+  }
+
+  .card-container {
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

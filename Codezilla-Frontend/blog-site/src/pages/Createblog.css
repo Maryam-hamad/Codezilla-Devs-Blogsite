@@ -1,0 +1,184 @@
+
+
+.main-post-container {
+  min-height: 100vh;
+  padding: 20px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+.blogpost-form {
+  width: 100%;
+  max-width: 360px;
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 22px 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border: 1px solid rgba(148,163,184,.15);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.blogpost-form h1 {
+  color: black;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.blogpost-form input[type="text"],
+.blogpost-form textarea {
+  width: 100%;
+  padding:12px 0;
+  padding-left: 4px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(148,163,184,.2);
+  font-family: sans-serif;
+  color: #e5e7eb;
+  outline: none;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
+}
+
+.blogpost-form input::placeholder,
+.blogpost-form textarea::placeholder {
+  color: #64748b;
+  
+}
+
+.blogpost-form input:focus,
+.blogpost-form textarea:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 2px rgba(34,211,238,.2);
+}
+
+
+.blogpost-form textarea {
+  resize: vertical;
+  min-height: 160px;
+  max-height: 420px;
+}
+
+
+.blogpost-form input[type="file"] {
+  display: none;
+}
+
+
+.file-label {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px dashed #22c55e;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #94a3b8;
+  transition: 0.2s ease;
+  width: fit-content;
+}
+
+.file-label:hover {
+  border-color: #22d3ee;
+  color: #22d3ee;
+}
+
+
+.blogpost-form .text-sm {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+
+.preview-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  position: relative;
+}
+
+.blogpost-form img {
+  width: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.blogpost-form .cancel-button {
+  position: absolute;
+  top: -8px;
+  left: -2px;
+  background: #ef4444;
+  color: white;
+  border-radius: 20%;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px;
+}
+
+.blogpost-form .cancel-button:hover {
+  background-color: #dc2626;
+}
+
+
+.blogpost-form button {
+  margin-top: 18px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #5df0ae, #22c55e);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 0 12px rgba(34,211,238,.4);
+}
+
+.blogpost-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(34,211,238,.7);
+}
+ 
+
+
+
+
+
+@media (min-width: 640px) {
+
+ 
+  .blogpost-form button {
+    right: 0px;
+  
+ }
+
+
+  .blogpost-form {
+    max-width: 480px;
+    padding: 28px 26px;
+  }
+
+  .blogpost-form h1 {
+    font-size: 2rem;
+  }
+}
+
+/* =====================
+   DESKTOP
+===================== */
+@media (min-width: 1024px) {
+  .blogpost-form {
+    max-width: 600px;
+  }
+}
