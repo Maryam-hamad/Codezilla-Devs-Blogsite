@@ -2,7 +2,7 @@ import axios from'axios'
 
 
 const API = axios.create({
-  baseURL: "http://localhost:8000/api"
+  baseURL: "https://codezilla-devs-blogsite-4.onrender.co"
 
 })
 
