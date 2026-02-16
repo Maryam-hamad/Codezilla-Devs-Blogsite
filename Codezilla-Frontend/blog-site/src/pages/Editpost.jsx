@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getPostById, updatePost } from '../api/Api'
-import './EditPost.css'
+import './Editpost.css'
 
 function EditPost() {
   const { id } = useParams()
