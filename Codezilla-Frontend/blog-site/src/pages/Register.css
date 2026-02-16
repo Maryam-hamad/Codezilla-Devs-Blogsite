@@ -23,7 +23,7 @@
 }
 
 .form-container h1 {
-  color: #f8fafc;
+  color: black;
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.6rem;
@@ -38,7 +38,7 @@
 }
 
 .input-container input {
-  color: #e5e7eb;
+  color: #000000;
   padding: 12px 14px;
   border: 1px solid rgba(148,163,184,.2);
   border-radius: 10px;
@@ -83,8 +83,8 @@
 
 .reg-container p,
 .reg-container a {
-  color: #94a3b8;
-  font-size: 13px;
+  color: #050606;
+  font-size: 14px;
 }
 
 .reg-container a:hover {

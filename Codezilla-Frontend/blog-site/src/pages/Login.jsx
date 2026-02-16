@@ -47,11 +47,11 @@ function Login() {
      
       
 
-      <p>No account?<Link>Create one</Link></p>
+      <p>No account?<Link to ="/register">Create one</Link></p>
       <p>Forgot email or trouble signing in? <Link to={"https://wa.link/1qjygp"}>Get help.</Link></p>
 
       <div className='terms-container'>
-      <p>By clicking "Sign in", you accept codzilla's <Link>Terms of Service </Link> and <Link>Privacy Policy</Link>.</p> 
+      <p>By clicking "Sign in", you accept codzilla's <Link to="/terms-of-service">Terms of Service </Link> and <Link to="privacy-policies">Privacy Policy</Link>.</p> 
       </div>
       
 

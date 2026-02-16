@@ -11,6 +11,9 @@ import ViewBlog from './pages/Viewblog.jsx'
 import Home from './pages/Home.jsx'
 import Library from './pages/Library.jsx'
 import Editpost from "./pages/Editpost.jsx"
+import Landingpage from "./pages/Landingpage.jsx"
+import Terms from './pages/Terms.jsx'
+import Privacy from './pages/Privacy.jsx'
 
 const router =createBrowserRouter([
   {
@@ -48,6 +51,18 @@ const router =createBrowserRouter([
     {
       path:'editpost/:id',
       Component:Editpost
+    },
+     {path:'/',
+      Component:Landingpage
+
+    },
+    {path:'terms-of-service',
+      Component:Terms
+
+    },
+    {
+      path:'privacy-policies',
+      Component:Privacy
     }
  
     ]

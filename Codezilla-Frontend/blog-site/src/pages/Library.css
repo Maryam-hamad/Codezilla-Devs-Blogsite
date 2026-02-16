@@ -42,13 +42,15 @@
 
 
 .card-container {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
   gap: 16px;
   padding: 14px 16px 50px;
 }
 
 .card-container p {
+  align-content: center;
+  justify-content: center;
   text-align: center;
   color: #94a3b8;
 }

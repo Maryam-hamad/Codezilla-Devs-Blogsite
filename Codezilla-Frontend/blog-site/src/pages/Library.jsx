@@ -48,7 +48,7 @@ function Library() {
 
       <div className="card-container">
         {posts.length === 0 ? (
-          <p>Create your first post</p>
+          <p>Create your first post....</p>
         ) : (
           posts.map(post => (
             <Librarycard key={post._id} post={post} />

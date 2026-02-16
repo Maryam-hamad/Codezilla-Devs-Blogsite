@@ -1,0 +1,99 @@
+
+.tos-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+.tos-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4f46e5;
+  text-align: center;
+}
+
+.tos-section h2 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #1e40af;
+}
+
+
+.tos-section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.tos-section a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.tos-section a:hover {
+  color: #4338ca;
+}
+
+
+@media (max-width: 600px) {
+  .tos-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .tos-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .tos-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .tos-section p {
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .tos-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .tos-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .tos-section p {
+    font-size: 1.05rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .tos-section {
+    padding: 3rem 2rem;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  }
+
+  .tos-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .tos-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .tos-section p {
+    font-size: 1.1rem;
+  }
+}

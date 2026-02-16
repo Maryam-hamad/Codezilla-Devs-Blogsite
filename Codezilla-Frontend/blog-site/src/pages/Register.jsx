@@ -1,18 +1,23 @@
-import { useState, useEffect , useContext} from 'react'
+import { useState, useEffect ,useContext} from 'react'
 import API from '../api/Api'
 import { AuthContext } from '../context/AuthContext'
-import { Link } from 'react-router-dom'
+import { Link ,useNavigate,useLocation} from 'react-router-dom'
 import './Register.css'
 
 
 function Register() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
 
   useEffect(() => {
     if(localStorage.getItem("user")){
-    window.location.href = "/home"
-  }
+      window.location.href ='/home'
+    }
 
   },[])
+
+
   
 
   const [form, setForm] = useState({
@@ -23,11 +28,13 @@ function Register() {
 
   const { login } = useContext(AuthContext)
 
+  const redirectTo = location.state?.redirectTo || "/home";
+
   const handleSubmit = async (e) =>{
     e.preventDefault()
     const res = await API.post("/auth/register" , form)
     login(res.data)
-    window.location.href ="/home"
+    navigate(redirectTo); 
 
   }
 
@@ -58,7 +65,7 @@ function Register() {
       <p>Already have an account? <Link to="/login">Sign In</Link></p>
        
       <div className='terms-container'>
-        <p>By clicking "Sign in", you accept codzilla's <Link>Terms of Service </Link> and <Link>Privacy Policy</Link>.</p> 
+        <p>By clicking "Sign in", you accept codzilla's <Link to="/terms-of-service">Terms of Service </Link> and <Link to="privacy-policies">Privacy Policy</Link>.</p> 
       </div>
 
     </div>

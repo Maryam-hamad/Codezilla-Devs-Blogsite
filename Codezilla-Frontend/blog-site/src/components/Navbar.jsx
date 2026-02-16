@@ -30,6 +30,11 @@ function Navbar(post) {
     window.location.href ='/library'
 
   }
+  
+  const goHome =(e) =>{
+    e.stopPropagation()
+     window.location.href ='/home'
+  }
 
 
   return (
@@ -87,18 +92,12 @@ function Navbar(post) {
           
       ) :(
         <>
-       
-        <h1 className='logo'>Codezilla</h1>
+        <Link to="/" className='landing-logo'><h1 >Codezilla</h1></Link>
+        
           
         
         <div className="nav-buttons">
 
-          <div className="write-icon">
-            <Link to="/register" style={{decoration:"none"}}>
-              <img src ="/pen1-svgrepo-com.svg"/>
-              <span>Write</span>
-            </Link>
-          </div>
 
           <Link to="/login">
             <button className='sign-in' >Sign In</button>
@@ -119,6 +118,11 @@ function Navbar(post) {
         < div className='menu-container' >
         
                   <div className='user-container'>
+
+                    <div className='home-button'>
+                      <button onClick={goHome}>Home</button>
+                    </div>
+                  
         
                     <div className='write'>
 
