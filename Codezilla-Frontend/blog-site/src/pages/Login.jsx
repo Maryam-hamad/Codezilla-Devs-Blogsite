@@ -51,7 +51,7 @@ function Login() {
       <p>Forgot email or trouble signing in? <Link to={"https://wa.link/1qjygp"}>Get help.</Link></p>
 
       <div className='terms-container'>
-      <p>By clicking "Sign in", you accept codzilla's <Link to="/terms-of-service">Terms of Service </Link> and <Link to="privacy-policies">Privacy Policy</Link>.</p> 
+      <p>By clicking "Sign in", you accept codezilla's <Link to="/terms-of-service">Terms of Service </Link> and <Link to="privacy-policies">Privacy Policy</Link>.</p> 
       </div>
       
 

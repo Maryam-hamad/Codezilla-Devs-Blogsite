@@ -76,7 +76,7 @@ function Register() {
       <p>Already have an account? <Link to="/login">Sign In</Link></p>
        
       <div className='terms-container'>
-        <p>By clicking "Sign in", you accept codzilla's <Link to="/terms-of-service">Terms of Service </Link> and <Link to="privacy-policies">Privacy Policy</Link>.</p> 
+        <p>By clicking "Sign in", you accept codezilla's <Link to="/terms-of-service">Terms of Service </Link> and <Link to="privacy-policies">Privacy Policy</Link>.</p> 
       </div>
 
     </div>

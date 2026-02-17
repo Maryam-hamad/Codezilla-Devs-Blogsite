@@ -42,7 +42,7 @@
 
 
 .card-container {
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   padding: 14px 16px 50px;
