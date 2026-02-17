@@ -3,6 +3,7 @@ import Postcard from '../components/Postcard'
 import './Home.css'
 import {getAllpost} from '../api/Api'
 import { Flex, Spin } from 'antd';
+import { useLocation ,useNavigate} from 'react-router-dom';
 
 
 
@@ -11,6 +12,18 @@ function Home() {
 
   const[posts ,setPosts] =useState([])
   const[loading ,setLoading] = useState(true)
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+ useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const redirectPost = params.get("to");
+
+  if (redirectPost) {
+    navigate(redirectPost, { replace: true });
+  }
+}, [location.search, navigate]);
 
 
 

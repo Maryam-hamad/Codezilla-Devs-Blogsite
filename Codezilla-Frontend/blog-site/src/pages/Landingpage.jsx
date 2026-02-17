@@ -14,8 +14,7 @@ function Landing({ post }) {
       
       navigate(postPath);
     } else {
-      
-      navigate("/register", { state: { redirectTo: postPath } });
+      navigate("/register", { state: { redirectToHome: true, postPath } })
     }
   };
 
@@ -27,7 +26,7 @@ function Landing({ post }) {
     if (user) {
       navigate(postPath);
     } else {
-      navigate("/register", { state: { redirectTo: postPath } }); 
+      navigate("/register", { state: { redirectToHome: true, postPath } });
     }
   };
 
@@ -36,10 +35,9 @@ function Landing({ post }) {
    const postPath = "/posts/69938df79a8699a198f3811e"; 
 
    if (user) {
-   
     navigate(postPath);
    } else {
-    navigate("/register", { state: { redirectTo: postPath } });
+    navigate("/register", { state: { redirectToHome: true, postPath } })
   }
 };
 
@@ -120,23 +118,23 @@ function Landing({ post }) {
           
 
            
-           <div className="featured-card">
+           <div className="featured-card" onClick={goToTwo}>
             <img
               src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="AI coding"
             />
-            <h4 onClick={goToTwo}>Why AI Will Change Coding Forever</h4>
+            <h4 >Why AI Will Change Coding Forever</h4>
           </div>
          
 
           
            
-           <div className="featured-card">
+           <div className="featured-card" onClick={goToThree}>
             <img
               src="https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Startup team"
             />
-            <h4 onClick={goToThree}>From Junior to Senior Developer</h4>
+            <h4>From Junior to Senior Developer</h4>
           </div>
           
           

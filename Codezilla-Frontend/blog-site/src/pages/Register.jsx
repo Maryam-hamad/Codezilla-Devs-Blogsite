@@ -28,15 +28,26 @@ function Register() {
 
   const { login } = useContext(AuthContext)
 
-  const redirectTo = location.state?.redirectTo || "/home";
+  const redirectToHome = location.state?.redirectToHome;
+  const postPath = location.state?.postPath;
 
-  const handleSubmit = async (e) =>{
-    e.preventDefault()
-    const res = await API.post("/auth/register" , form)
-    login(res.data)
-    navigate(redirectTo); 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  }
+    const res = await API.post("/auth/register", form);
+    login(res.data);
+
+    const redirectToPost = location.state?.postPath;
+
+    if (redirectToPost) {
+      window.location.href = `/home?to=${encodeURIComponent(redirectToPost)}`;
+    } else {
+      window.location.href = "/home";
+    }
+ };
+
+
+   
 
 
   return (
