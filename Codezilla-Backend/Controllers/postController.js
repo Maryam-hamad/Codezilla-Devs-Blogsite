@@ -73,7 +73,7 @@ const updatePost = async (req, res) => {
   post.content = req.body.content || post.content;
 
   if (req.file) {
-    post.image = req.file.path;
+    post.imageUrl = req.file.path;
   }
 
   const updatedPost = await post.save();
