@@ -15,7 +15,7 @@ router.post("/posts" ,protect, upload.single("image"), createPost)
 
 router.get("/mine", protect, getMyPosts);
 
-router.put("/posts/:id" ,protect, updatePost)
+router.put("/posts/:id" ,protect,upload.single("image"), updatePost)
 
 router.delete("/posts/:id" ,protect, deletePost)
 

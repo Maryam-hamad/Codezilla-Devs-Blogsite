@@ -7,13 +7,11 @@ const uploadToCloudinary = require ('../Utils/cloudinaryUpload')
 
 const getAllpost = async (req ,res) => {
 
-  const allPost =  await Post.find()
-  .sort({createdAt:-1})
+  const allPost =  await Post.find().sort({createdAt:-1})
 
   .populate("author","_id username email");
   console.log(allPost[0].author);
 
-  
   res.status(200).json(allPost)
 
 }

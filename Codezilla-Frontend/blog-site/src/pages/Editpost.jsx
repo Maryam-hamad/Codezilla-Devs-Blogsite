@@ -9,6 +9,8 @@ function EditPost() {
   const { id } = useParams()
   const navigate = useNavigate()
 
+ 
+
   const [title, setTitle] = useState('')
   const[subtitle,setSubtitle]=useState('')
   const [content,setContent]= useState('')
@@ -31,6 +33,8 @@ function EditPost() {
     e.preventDefault()
     setLoading(true)
 
+    
+
     const formData = new FormData()
     formData.append('title', title)
     formData.append('subtitle', subtitle)
@@ -39,10 +43,13 @@ function EditPost() {
 
     try {
       await updatePost(id, formData)
+      alert("Post updated successfully")
       navigate('/library')
+
     } catch (err) {
       console.error(err)
     } finally {
+
       setLoading(false)
     }
   }
@@ -61,7 +68,7 @@ function EditPost() {
         <input
           type="text"
           value={subtitle}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setSubtitle(e.target.value)}
         />
 
 
