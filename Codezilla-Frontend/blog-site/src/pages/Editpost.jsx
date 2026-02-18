@@ -28,11 +28,11 @@ function EditPost() {
           title: res.data.title,
           subtitle: res.data.subtitle,
           content: res.data.content,
-          imageUrl: null, // keep null unless new file selected
+          imageUrl:res.data.imageUrl
         });
 
         setContentLength(res.data.content.length);
-        setImagePreview(res.data.image); // existing image
+        setImagePreview(res.data.imageUrl); 
       } catch (err) {
         alert("Failed to load post");
       }
@@ -162,7 +162,7 @@ function EditPost() {
           )}
 
           <div>
-            <button type="submit">
+            <button>
               {loading ? "Updating..." : "UPDATE POST"}
             </button>
           </div>
