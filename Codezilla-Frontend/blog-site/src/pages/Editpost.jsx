@@ -14,7 +14,7 @@ function EditPost() {
   const [title, setTitle] = useState('')
   const[subtitle,setSubtitle]=useState('')
   const [content,setContent]= useState('')
-  const [image, setImage] = useState(null)
+  const [imageUrl, setImageUrl] = useState(null)
   const [preview, setPreview] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -24,7 +24,7 @@ function EditPost() {
       setTitle(res.data.title)
       setSubtitle(res.data.subtitle)
       setContent(res.data.content)
-      setPreview(res.data.image)
+      setPreview(res.data.imageUrl)
     }
     loadPost()
   }, [id])
@@ -39,7 +39,7 @@ function EditPost() {
     formData.append('title', title)
     formData.append('subtitle', subtitle)
     formData.append('content', content)
-    if (image) formData.append('image', image)
+    if (form.imageUrl) formData.append("image", form.imageUrl);
 
     try {
       await updatePost(id, formData)
@@ -83,7 +83,7 @@ function EditPost() {
             type="file"
             hidden
             onChange={(e) => {
-              setImage(e.target.files[0])
+              setImageUrl(e.target.files[0])
               setPreview(URL.createObjectURL(e.target.files[0]))
             }}
           />
