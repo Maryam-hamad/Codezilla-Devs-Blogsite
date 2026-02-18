@@ -46,7 +46,7 @@ const createPost = async (req, res) => {
     subtitle: req.body.subtitle,
     content: req.body.content,
     imageUrl: imageUrl,
-    author: req.user._id, // 
+    author: req.user._id, 
   });
 
   res.status(201).json(newPost);
@@ -71,10 +71,13 @@ const updatePost = async (req, res) => {
   post.title = req.body.title || post.title;
   post.subtitle = req.body.subtitle || post.subtitle;
   post.content = req.body.content || post.content;
+  post.imageUrl =req.body.imageUrl || post.imageUrl
 
   if (req.file) {
-    post.imageUrl = req.file.path;
+    const result = await uploadToCloudinary(req.file.buffer);
+    imageUrl = result.secure_url;
   }
+  
 
   const updatedPost = await post.save();
 

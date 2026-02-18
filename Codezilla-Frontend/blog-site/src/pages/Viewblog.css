@@ -40,6 +40,11 @@
 }
 
 .author-avatar {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+   border: 1px solid; 
+  border-color: inherit; 
   width: 44px;
   height: 44px;
   border-radius: 50%;

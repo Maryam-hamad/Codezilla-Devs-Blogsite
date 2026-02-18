@@ -25,7 +25,18 @@ function ViewBlog() {
     <p className="post-subtitle">{post.subtitle}</p>
 
     <div className="post-meta">
-      <img className="author-avatar" src={post.author?.avatar} alt="" />
+      <div className="author-avatar">
+            {post.author?.avatar ? (
+              <img
+                src={post.author.avatar}
+                alt={post.author.username}
+              />
+            ) : (
+              <span className="avatar-alt">
+                {post.author?.username?.charAt(0).toUpperCase() || "?"}
+              </span>
+            )}
+          </div>
       <div>
         <p className="author-name">{post.author?.username}</p>
         <p className="post-date">
