@@ -71,7 +71,7 @@ const updatePost = async (req, res) => {
   post.title = req.body.title || post.title;
   post.subtitle = req.body.subtitle || post.subtitle;
   post.content = req.body.content || post.content;
-  post.imageUrl =req.body.imageUrl || post.imageUrl
+  
 
   let imageUrl = null
 
