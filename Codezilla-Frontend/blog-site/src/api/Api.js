@@ -27,6 +27,7 @@ export const loginUser =(data) => API.post("/auth/login" ,data)
 export const getAllpost = () => API.get("/posts")
 export const getPostById = (id) => API.get(`/posts/${id}`)
 export const createPost =(formData) => API.post("/posts" , formData ,{headers: {"Content-Type": "multipart/form-data"}})
+
 export const updatePost = (id, formData) =>
   API.put(`/posts/${id}`, formData, {
     headers: { "Content-Type": "multipart/form-data" }

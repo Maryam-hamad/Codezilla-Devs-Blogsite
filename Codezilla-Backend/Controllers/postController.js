@@ -60,21 +60,28 @@ const getMyPosts = async (req, res) => {
 
 // Update post
 
-const updatePost = async (req , res) =>{
+const updatePost = async (req, res) => {
+ 
+  const post = await Post.findById(req.params.id);
 
-  const post = await Post.findById(req.params.id)
+  if (!post) {
+    return res.status(404).json({ error: "Post not found" });
+  }
+
+  post.title = req.body.title || post.title;
+  post.subtitle = req.body.subtitle || post.subtitle;
+  post.content = req.body.content || post.content;
+
+  if (req.file) {
+    post.image = req.file.path;
+  }
+
+  const updatedPost = await post.save();
+
+  res.status(200).json(updatedPost);
   
-  
-  if(!post) return res.status(400).json({ error: "post not found"})
+};
 
-
-  //updating post
-  Object.assign( Post , req.body)
-
-  const updatedPost =  await Post.save()
-  res.status(201).json(updatedPost)
-
-}
 
 //Delete Post
 
