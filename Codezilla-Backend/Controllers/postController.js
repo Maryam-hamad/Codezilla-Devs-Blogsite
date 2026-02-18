@@ -73,6 +73,8 @@ const updatePost = async (req, res) => {
   post.content = req.body.content || post.content;
   post.imageUrl =req.body.imageUrl || post.imageUrl
 
+  let imageUrl = null
+
   if (req.file) {
     const result = await uploadToCloudinary(req.file.buffer);
     imageUrl = result.secure_url;
